@@ -10,7 +10,7 @@ setup(
 		install_requires=[
 
 		],
-		url='https://github.com/Hedronium/pyloop',
+		url='https://github.com/Hedronium/flask-valid',
 		#download_url = 'https://github.com/Hedronium/pyloop/tarball/0.18',
 		author = 'Hedronium',
 		keywords = ['form validator','python 3','flask','form validator for flask'],

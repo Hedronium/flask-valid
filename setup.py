@@ -10,14 +10,10 @@ setup(
 		install_requires=[
 
 		],
-		entry_points = '''
-			[console_scripts]
-			pyloop=pyloop.app:index
-		''',
 		url='https://github.com/Hedronium/pyloop',
 		#download_url = 'https://github.com/Hedronium/pyloop/tarball/0.18',
 		author = 'Hedronium',
-		keywords = ['package manger','python 3'],
+		keywords = ['form validator','python 3','flask','form validator for flask'],
 		author_email= 'project.anik@gmail.com',
 		licence='MIT'
 )

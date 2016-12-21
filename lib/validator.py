@@ -38,33 +38,33 @@ class Validator:
 
 	#set maximum value
 	def max(self,value,max,errorMessage = ''):
-		try:
-			val = int(value)
-			self.maxError = errorMessage
+		if 	type(max) not int:
+			raise ValueError("max value is not an integer")
 
-			if (val > max ):
-				return self.maxError
-			else:
-				return ''
+		val = int(value)
+		self.maxError = errorMessage
 
-		except ValueError:
-			print("it's not an integer")
+		if (val > max ):
+			return self.maxError
+		else:
+			return True
 
 	#set minimum value
 	def min(self,value,min,errorMessage = ''):
-		try:
-			val = int(value)
+		
+		if type(value) not int:
+			raise ValueError('value is not an integer')
 
-			if errorMessage:
-				self.minError = errorMessage
+		val = int(value)
 
-			if val < min:
-				return self.minError
-			else:
-				return ''
+		if errorMessage:
+			self.minError = errorMessage
 
-		except ValueError:
-			print("It's not an integer")
+		if val < min:
+			return self.minError
+		else:
+			return True
+
 
 	#check for input that email or not
 	def email(self,value,errorMessage = ''):
@@ -76,7 +76,7 @@ class Validator:
 		if value == "":
 			return self.emailError
 		else:
-			return ''
+			return True
 
 	#check for integer value
 	def integer(self,value,errorMessage =''):
@@ -86,7 +86,7 @@ class Validator:
 		if type(value) is not int:
 			return self.integerError
 		else:
-			return ''
+			return True
 
 	#check for string value
 	def string(self,value,errorMessage = ''):
@@ -117,4 +117,5 @@ class Validator:
 
 	def csrfdestroy(self):
 		return session['sdfshdfahlfgfdlhdfkjghakgjhdfkgjdfhgdfgnjgnf'] = ''
+
 
